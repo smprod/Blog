@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1 style="text-align: center;">Посты</h1>
+{% for p in post %}
+<div>
+    <h2>{{ p.title }}</h2>
+    <p>{{ p.text }}</p>
+    {% if p.img %}
+    <p><img class="img-article-left thumb" src="{{p.img.url}}" alt=""></p>
+    {% endif %}
+    <a href="{{ p.get_absolute_url }}"><button class="read">Читать пост</button></a> <br>
+    <h3>Автор: {{ p.author }}</h3>
+    <h4>Опубликовано: {{ p.time_create }}</h4>
+    {% if p.time_create == p.time_update %}
+
+    {% else %}
+        <h4>Изменино: {{ p.time_update }}</h4>
+    {% endif %}
+</div>
+{% endfor %}
+{% endblock body %}

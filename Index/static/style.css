@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #444;
+    padding: 14px 16px;
+    font-size: 20px;
+}
+
+.topnav a {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+.resize {
+    width: 2%;
+    height: auto;
+}
+
+.read {
+    height: 34px;
+    width: 100px;
+    background-color: #444;
+    color: white;
+}
+
+img.img-article-left.thumb {
+	max-width: 400px;
+	height: auto;
+}
+
+img.img-article-left{
+	max-width: 600px;
+	height: auto;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}

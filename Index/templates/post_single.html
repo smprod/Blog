@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>{{ post.title }}</h1>
+<p>{{ post.text }}</p>
+{% if post.img %}
+<img class="img-article-left" src="{{ post.img.url }}" alt="">
+{% endif %}
+<h2>Автор: {{ post.author }}</h2>
+<h4>Опубликовано: {{ post.time_create }}</h4>
+{% if post.time_create == post.time_update %}
+
+{% else %}
+    <h4>Изменино: {{ post.time_update }}</h4>
+{% endif %}
+{% endblock body %}
